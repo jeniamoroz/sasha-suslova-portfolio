@@ -1,3 +1,33 @@
 language: node_js
+
 node_js:
   - 'stable'
+
+addons:
+  apt:
+    packages:
+      # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
+      - libgconf-2-4
+
+## Cache NPM folder and Cypress binary
+## to avoid downloading Cypress again and again
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+
+before_script:
+  ## runs the 'build' and 'start' script which
+  ## boots our local app server on port 3000
+  ## which cypress expects to be running
+  ## ---------------------------------------
+  ## we use the '&' ampersand which tells
+  ## travis to run this process in the background
+  ## else it would block execution and hang travis
+  - npm run build
+  - npm run start &
+
+script:
+  ## now run cypress headlessly
+  ## and record all of the tests.
+  - npm run cypress:run
