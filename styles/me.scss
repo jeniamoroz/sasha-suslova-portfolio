@@ -1,0 +1,48 @@
+.me-row {
+  @include make-row();
+  margin-top: 1.5em;
+  @include media-breakpoint-up(md) {
+    margin-top: 5em;
+  }
+}
+
+.me-col-wrapper {
+  @include make-col-ready();
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+  @include media-breakpoint-up(md) {
+    @include make-col(12);
+  }
+}
+
+.me-picture-wrapper,
+.me-description {
+  position: relative;
+  display: inline-block;
+  @include media-breakpoint-up(md) {
+    width: 270px;
+  }
+}
+
+.me-picture {
+  width: 100%;
+}
+
+.me-picture-wrapper {
+  padding-bottom: 1em;
+  padding-right: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.me-picture-background {
+  position: absolute;
+  z-index: -1;
+  width: 224px;
+  height: 245px;
+  bottom: 0;
+  right: 0;
+  background-color: #fff705;
+}

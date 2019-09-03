@@ -1,5 +1,11 @@
-$font-size: 14px;
-.root {
-  font-size: $font-size;
-  text-align: center;
-}
+// variables override
+@import 'variables';
+@import '../node_modules/bootstrap-scss/bootstrap-reboot';
+@import '../node_modules/bootstrap-scss/bootstrap-grid';
+
+// include only following components
+@import '../node_modules/bootstrap-scss/type';
+@import '../node_modules/bootstrap-scss/navbar';
+@import 'app';
+@import 'nav';
+@import 'me';

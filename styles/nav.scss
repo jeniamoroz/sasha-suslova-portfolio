@@ -1,0 +1,9 @@
+@import '../node_modules/bootstrap-scss/nav';
+
+.navbar-row {
+  @include make-row();
+}
+
+.nav-link {
+  text-decoration: none;
+}
