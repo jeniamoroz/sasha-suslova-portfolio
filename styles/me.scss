@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .me-row {
   @include make-row();
   margin-top: 1.5em;
@@ -19,30 +21,22 @@
 
 .me-picture-wrapper,
 .me-description {
-  position: relative;
   display: inline-block;
   @include media-breakpoint-up(md) {
     width: 270px;
   }
 }
 
-.me-picture {
-  width: 100%;
-}
-
 .me-picture-wrapper {
-  padding-bottom: 1em;
-  padding-right: 1em;
+  @include yellow-fade('right');
   margin-right: 1em;
   margin-bottom: 1em;
 }
 
-.me-picture-background {
-  position: absolute;
-  z-index: -1;
-  width: 224px;
-  height: 245px;
-  bottom: 0;
-  right: 0;
-  background-color: #fff705;
+.me-picture {
+  width: 100%;
+}
+
+.me-description {
+  margin-left: 1em;
 }

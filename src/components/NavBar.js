@@ -1,19 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from './Link';
-import NavItem from './NavItem';
 
-const NavBar = () => (
+const NavBar = ({ children }) => (
   <div className="navbar-row">
     <nav className="navbar navbar-expand navbar-light bg-light flex-fill" role="navigation">
       <Link className="navbar-brand">
         <img src="/static/logo_1.svg" alt="UXI Sasha Suslova" height="60" />
       </Link>
-      <ul className="navbar-nav ml-auto">
-        <NavItem>portfolio</NavItem>
-        <NavItem>about</NavItem>
-      </ul>
+      <ul className="navbar-nav ml-auto">{children}</ul>
     </nav>
   </div>
 );
+
+NavBar.propTypes = {
+  children: PropTypes.node,
+};
 
 export default NavBar;

@@ -4,6 +4,27 @@
   @include make-row();
 }
 
-.nav-link {
-  text-decoration: none;
+.navbar-light {
+  .navbar-nav {
+    & .active {
+      & > .nav-link {
+        font-weight: 700;
+      }
+      border-bottom: 5px solid $firm-yellow;
+    }
+    .nav-link {
+      font-size: $lead-font-size;
+      padding: 0;
+    }
+    .nav-item {
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }

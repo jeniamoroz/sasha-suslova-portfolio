@@ -13,6 +13,23 @@
     "plugin:cypress/recommended"
   ],
   "rules": {
-    "prettier/prettier": 2
+    "prettier/prettier": 2,
+    "no-console": 2,
+    "no-alert": 2,
+    "no-debugger": 2,
+    "no-confusing-arrow": 2,
+    "no-delete-var": 2,
+    "no-duplicate-imports": 2,
+    "no-await-in-loop": 2,
+    "no-eval": 2,
+    "no-func-assign": 2,
+    "no-global-assign": 2,
+    "no-multiple-empty-lines": 2,
+    "no-self-assign": 2,
+    "no-self-compare": 2,
+    "no-tabs": 2,
+    "no-var": 2,
+    "arrow-spacing": 2,
+    "multiline-ternary": 2
   }
 }

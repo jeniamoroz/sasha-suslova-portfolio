@@ -1,0 +1,29 @@
+@import 'variables';
+
+// direction can be 'left' and 'right'
+@mixin yellow-fade($direction) {
+  position: relative;
+  padding-bottom: 1em;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 80%;
+    width: 90%;
+    bottom: 0;
+    right: 0;
+    background-color: $firm-yellow;
+  }
+  @if $direction == 'left' {
+    padding-left: 1em;
+    &:after {
+      left: 0;
+    }
+  }
+  @if $direction == 'right' {
+    padding-right: 1em;
+    &:after {
+      right: 0;
+    }
+  }
+}
