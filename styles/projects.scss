@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.projects-row {
+  @include make-row();
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  @include media-breakpoint-up(md) {
+    margin-top: 5em;
+  }
+}
+
+.projects-title {
+  text-align: center;
+}

@@ -1,6 +1,6 @@
 describe('Index test', () => {
-  it('successfully loads and says welcome', () => {
-    cy.visit('http://localhost:3000');
+  it('successfully loads portfolio', () => {
+    cy.visit('http://localhost:3000/portfolio');
     cy.contains('portfolio');
     cy.contains('about');
     cy.contains('Sasha');
@@ -8,5 +8,11 @@ describe('Index test', () => {
     cy.contains('Newstime');
     cy.contains('Y-packs');
     cy.contains('Bionit');
+  });
+  it('successfully loads about page', () => {
+    cy.visit('http://localhost:3000/about');
+    cy.contains('portfolio');
+    cy.contains('about');
+    cy.contains('Sasha Suslova');
   });
 });

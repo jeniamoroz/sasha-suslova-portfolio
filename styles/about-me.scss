@@ -1,0 +1,16 @@
+@import 'mixins';
+
+.about-me-row {
+  @include make-row();
+}
+
+.about-me-col {
+  @include make-col-ready();
+
+  @include media-breakpoint-up(sm) {
+    @include make-col(12);
+  }
+  @include media-breakpoint-up(md) {
+    @include make-col(6);
+  }
+}

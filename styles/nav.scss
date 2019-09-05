@@ -2,6 +2,10 @@
 
 .navbar-row {
   @include make-row();
+  margin-bottom: 1.5em;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 5em;
+  }
 }
 
 .navbar-light {

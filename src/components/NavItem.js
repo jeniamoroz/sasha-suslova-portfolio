@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Link from './Link';
+import withIsActiveRoute from './withIsActiveRoute';
 
-const NavItem = ({ children, to, active }) => (
-  <li className={classnames('nav-item', { active })}>
-    <Link to={to} className="nav-link">
+const NavItem = ({ children, href, isActiveRoute }) => (
+  <li className={classnames('nav-item', { active: isActiveRoute })}>
+    <Link className="nav-link" href={href}>
       {children}
     </Link>
   </li>
@@ -13,12 +14,8 @@ const NavItem = ({ children, to, active }) => (
 
 NavItem.propTypes = {
   children: PropTypes.node,
-  to: PropTypes.string.isRequired,
-  active: PropTypes.bool.isRequired,
+  href: PropTypes.string.isRequired,
+  isActiveRoute: PropTypes.bool.isRequired,
 };
 
-NavItem.defaultProps = {
-  active: false,
-};
-
-export default NavItem;
+export default withIsActiveRoute(NavItem);
