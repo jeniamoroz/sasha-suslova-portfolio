@@ -19,4 +19,8 @@ Projects.propTypes = {
   ).isRequired,
 };
 
+Projects.defaultProps = {
+  projects: [],
+};
+
 export default Projects;

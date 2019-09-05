@@ -2,6 +2,9 @@ import React from 'react';
 import Layout from '../src/components/Layout';
 import AboutMe from '../src/components/AboutMe';
 
+/**
+ * About page.
+ */
 const About = () => (
   <Layout
     title="Sasha Suslova - UXI Designer"

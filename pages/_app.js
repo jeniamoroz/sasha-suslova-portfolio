@@ -2,12 +2,16 @@ import React from 'react';
 import App from 'next/app';
 import NavBar from '../src/components/NavBar';
 import NavItem from '../src/components/NavItem';
-
+import menuItems from '../src/const/menu';
 import '../styles/index.scss';
 
-const menuItems = [{ href: '/portfolio', label: 'portfolio' }, { href: '/about', label: 'about' }];
-
 class MainApp extends App {
+  static async getInitialProps(appContext) {
+    // calls page's `getInitialProps` and fills `appProps.pageProps`
+    const appProps = await App.getInitialProps(appContext);
+    return { ...appProps };
+  }
+
   render() {
     const { Component, pageProps } = this.props;
     return (

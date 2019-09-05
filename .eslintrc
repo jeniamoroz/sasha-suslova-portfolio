@@ -29,7 +29,6 @@
     "no-self-compare": 2,
     "no-tabs": 2,
     "no-var": 2,
-    "arrow-spacing": 2,
-    "multiline-ternary": 2
+    "arrow-spacing": 2
   }
 }
