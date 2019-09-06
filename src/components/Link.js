@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 
+/**
+ * Generic Link component.
+ */
 const Link = ({ className, children, ...props }) => (
   <NextLink {...props}>
     <a className={className}>{children}</a>

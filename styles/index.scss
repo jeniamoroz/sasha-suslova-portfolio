@@ -8,9 +8,13 @@
 // include only following components
 @import '../node_modules/bootstrap-scss/type';
 @import '../node_modules/bootstrap-scss/navbar';
+@import '../node_modules/bootstrap-scss/buttons';
 
+@import 'global';
 @import 'nav';
 @import 'me';
 @import 'projects';
 @import 'project';
 @import 'about-me';
+@import 'buttons';
+@import 'footer';

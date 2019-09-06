@@ -1,7 +1,10 @@
 import React from 'react';
 
+/**
+ * Me block.
+ */
 const Me = () => (
-  <div className="me-row">
+  <div className="row">
     <div className="me-col-wrapper">
       <div className="me-picture-wrapper">
         <img className="me-picture" src="/static/me.jpg" alt="Me, Sasha Suslova" />

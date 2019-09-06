@@ -3,12 +3,16 @@
 .projects-row {
   @include make-row();
   margin-bottom: 1.5em;
-  margin-top: 1.5em;
-  @include media-breakpoint-up(md) {
-    margin-top: 5em;
-  }
+  margin-top: 5em;
+}
+
+.projects-column {
+  @include make-col-ready();
+  @include make-col(12);
 }
 
 .projects-title {
+  font-size: 3.3em;
+  margin-bottom: 2em;
   text-align: center;
 }

@@ -1,0 +1,32 @@
+.btn {
+  border-radius: 0;
+  text-transform: lowercase;
+  font-weight: 700;
+  padding: 0 1.25rem;
+  position: relative;
+  &:after {
+    content: '';
+    border: $firm-yellow 3px solid;
+    position: absolute;
+    top: 0;
+    right: -6px;
+    bottom: -6px;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.btn-primary {
+  color: $firm-black;
+  background-color: transparent;
+  border: $firm-black 3px solid;
+  &:hover {
+    color: $firm-yellow;
+    background-color: $firm-black;
+    border: $firm-black 3px solid;
+  }
+  &:focus,
+  &:disabled {
+    box-shadow: none;
+  }
+}

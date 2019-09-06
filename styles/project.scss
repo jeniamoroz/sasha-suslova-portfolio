@@ -1,8 +1,5 @@
-.project-row {
-  @include make-row();
-}
-
-.project-column {
+.project-picture-column,
+.project-description-column {
   @include make-col-ready();
 
   @include media-breakpoint-up(sm) {
@@ -13,10 +10,28 @@
   }
 }
 
+.project-description-column {
+  padding-top: 2em;
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+    padding-bottom: 4em;
+  }
+}
+
+.project-picture-column {
+  padding-bottom: 4em;
+  @include media-breakpoint-down(md) {
+    padding-bottom: 2em;
+  }
+}
+
 .project-picture-wrapper {
-  @include yellow-fade('right');
-  margin-right: 1em;
-  margin-bottom: 1em;
+  @include yellow-fade();
+  @include media-breakpoint-up(md) {
+    &.inverse {
+      @include inverse-yellow-fade();
+    }
+  }
 }
 
 .project-picture {

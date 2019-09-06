@@ -1,9 +1,5 @@
 @import 'mixins';
 
-.about-me-row {
-  @include make-row();
-}
-
 .about-me-col {
   @include make-col-ready();
 

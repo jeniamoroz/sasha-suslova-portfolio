@@ -1,9 +1,12 @@
 @import 'variables';
 
+$yellow-fade-out-size: 0.75rem;
+
 // direction can be 'left' and 'right'
-@mixin yellow-fade($direction) {
+@mixin yellow-fade() {
   position: relative;
-  padding-bottom: 1em;
+  padding-bottom: $yellow-fade-out-size;
+  padding-right: $yellow-fade-out-size;
   &:after {
     content: '';
     position: absolute;
@@ -14,16 +17,12 @@
     right: 0;
     background-color: $firm-yellow;
   }
-  @if $direction == 'left' {
-    padding-left: 1em;
-    &:after {
-      left: 0;
-    }
-  }
-  @if $direction == 'right' {
-    padding-right: 1em;
-    &:after {
-      right: 0;
-    }
+}
+@mixin inverse-yellow-fade() {
+  padding-right: initial;
+  padding-left: $yellow-fade-out-size;
+  &:after {
+    right: initial;
+    left: 0;
   }
 }

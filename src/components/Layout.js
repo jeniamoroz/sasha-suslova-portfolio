@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 
+/**
+ * Layout for every page, adds additional content to the page.
+ */
 const Layout = ({ title, description, keywords, children }) => (
   <>
     <Head>

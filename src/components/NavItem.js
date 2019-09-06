@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Link from './Link';
-import withIsActiveRoute from './withIsActiveRoute';
+import withIsActiveRoute from '../util/withIsActiveRoute';
 
 const NavItem = ({ children, href, isActiveRoute }) => (
   <li className={classnames('nav-item', { active: isActiveRoute })}>

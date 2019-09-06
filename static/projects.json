@@ -3,7 +3,7 @@
     "title": "Alfa-bank - App",
     "description": "Design of user experience for 2 user jobs.",
     "releaseDate": "Jun 2018",
-    "direction": "left",
+    "inverseOrder": true,
     "pictureUrl": "/static/alfa_1.jpg",
     "moreUrl": "#"
   },
@@ -11,7 +11,6 @@
     "title": "Newstime",
     "description": "Web-site design, project management.",
     "releaseDate": "Feb 2019",
-    "direction": "right",
     "pictureUrl": "/static/newstime_1.jpg",
     "moreUrl": "#"
   },
@@ -19,7 +18,7 @@
     "title": "Y-packs",
     "description": "Promotion strategy, product design, web-site design.",
     "releaseDate": "Apr 2019",
-    "direction": "left",
+    "inverseOrder": true,
     "pictureUrl": "/static/ypack_1.jpg",
     "moreUrl": "#"
   },
@@ -27,7 +26,6 @@
     "title": "Bionit",
     "description": "Web-site design, package design.",
     "releaseDate": "Aug 2018",
-    "direction": "right",
     "pictureUrl": "/static/bionit_1.jpg",
     "moreUrl": "#"
   }

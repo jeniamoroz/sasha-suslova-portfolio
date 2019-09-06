@@ -1,9 +1,5 @@
 @import 'mixins';
 
-.me-row {
-  @include make-row();
-}
-
 .me-col-wrapper {
   @include make-col-ready();
 
@@ -24,7 +20,7 @@
 }
 
 .me-picture-wrapper {
-  @include yellow-fade('right');
+  @include yellow-fade();
   margin-right: 1em;
   margin-bottom: 1em;
 }

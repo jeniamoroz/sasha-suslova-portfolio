@@ -1,0 +1,12 @@
+.footer {
+  border-top: $firm-black 2px solid;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  .socials {
+    text-align: center;
+    .social-img {
+      width: 2em;
+      margin: 0.2em;
+    }
+  }
+}
