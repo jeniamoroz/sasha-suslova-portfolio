@@ -7,7 +7,7 @@ import Link from './Link';
 const Footer = () => (
   <footer className="container footer">
     <div className="row">
-      <div className="col-md-4 col-sm-6">
+      <div className="col-cv-download">
         <Link
           className="btn btn-primary"
           href="https://drive.google.com/open?id=1jyFdHJHuU9ixdVCVoHw4Ws511srAS99j"
@@ -15,9 +15,10 @@ const Footer = () => (
           download cv
         </Link>
       </div>
-      <div className="col-md-4 offset-md-4 col-sm-6 col-sm-offset-0">
+      <div className="col-contacts">
         <p>
           <a href="tel:+38 066 868 88 54">+38 066 868 88 54 </a>
+          <br />
           <a href="mailto:suslova.oleksandra@gmail.com">suslova.oleksandra@gmail.com</a>
         </p>
         <p>

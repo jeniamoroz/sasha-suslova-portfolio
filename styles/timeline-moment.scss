@@ -1,0 +1,68 @@
+$timeline-line-width: 3px;
+$timeline-center-offset: -$timeline-line-width / 2;
+$timeline-point-size: 40px;
+$timeline-point-offset-top: -$timeline-point-size / 2;
+$timeline-point-offset-side: -12px;
+$timeline-padding: 3em;
+
+.timeline-moment {
+  @include make-col-ready();
+  @include media-breakpoint-up(xs) {
+    @include make-col(12);
+    @include make-col-offset(0);
+  }
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+    @include make-col-offset(6);
+  }
+  text-align: left;
+  padding-left: $timeline-padding;
+  // before presudo element to used as "timeline point"
+  &:before {
+    content: '\25CF';
+    color: $firm-yellow;
+    position: absolute;
+    font-size: $timeline-point-size;
+    top: $timeline-point-offset-top; // offset to align point with baseline of the title's first line
+    left: $timeline-point-offset-side;
+  }
+  // after pseudo element to be used as "part of timeline"
+  &:after {
+    content: '';
+    position: absolute;
+    width: $timeline-line-width;
+    height: 100%;
+    left: $timeline-center-offset;
+    top: 0;
+    background-color: $firm-yellow;
+  }
+  // puts timline to the right but only for screens greater than small
+  &.inverse {
+    @include media-breakpoint-up(sm) {
+      @include make-col-offset(0);
+      text-align: right;
+      padding-left: initial;
+      padding-right: $timeline-padding;
+      &:before {
+        left: initial;
+        right: $timeline-point-offset-side;
+      }
+      &:after {
+        left: initial;
+        right: $timeline-center-offset;
+      }
+    }
+  }
+  // first child should start timeline from first point and offset it
+  &:first-child {
+    &:after {
+      margin-top: 16px;
+    }
+  }
+  // last child should finish at last point and not offset it
+  &:last-child {
+    &:after {
+      height: 10px;
+    }
+  }
+}

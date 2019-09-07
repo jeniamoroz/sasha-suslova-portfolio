@@ -10,10 +10,10 @@ import Link from './Link';
  */
 const Project = ({ inverseOrder, title, description, releaseDate, moreUrl, pictureUrl }) => {
   const pictureColumnClassName = classnames('project-picture-column', {
-    'order-md-2': inverseOrder,
+    'order-md-last': inverseOrder,
   });
   const descriptionColumnClassName = classnames('project-description-column', {
-    'order-md-1': inverseOrder,
+    'order-md-first': inverseOrder,
   });
   const pictureWrapperClassName = classnames('project-picture-wrapper', {
     inverse: inverseOrder,

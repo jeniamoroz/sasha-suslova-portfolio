@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Me from '../src/components/Me';
 import Layout from '../src/components/Layout';
 import Projects from '../src/components/Projects';
-import { loadProjects } from '../src/api/projects';
+import { loadProjects } from '../src/api/global';
 import { createBaseUrl } from '../src/util/api';
 
 /**

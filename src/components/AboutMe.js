@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AboutMe = () => (
-  <div className="about-me-row">
+  <div className="row">
     <div className="about-me-col">
       <h1>Sasha Suslova</h1>
       <p>UXI Designer</p>

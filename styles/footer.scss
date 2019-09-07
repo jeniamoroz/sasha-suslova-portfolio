@@ -1,7 +1,27 @@
 .footer {
   border-top: $firm-black 2px solid;
-  padding-top: 2em;
   padding-bottom: 2em;
+  .col-cv-download,
+  .col-contacts {
+    @include make-col-ready();
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+    padding-top: 2em;
+  }
+  .col-contacts {
+    @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(sm) {
+        @include make-col-offset(0);
+      }
+      @include media-breakpoint-up(md) {
+        @include make-col-offset(4);
+      }
+    }
+  }
   .socials {
     text-align: center;
     .social-img {
