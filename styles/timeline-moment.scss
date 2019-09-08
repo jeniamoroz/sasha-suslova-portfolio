@@ -4,6 +4,7 @@ $timeline-point-size: 40px;
 $timeline-point-offset-top: -$timeline-point-size / 2;
 $timeline-point-offset-side: -12px;
 $timeline-padding: 3em;
+$timeline-color: $firm-black;
 
 .timeline-moment {
   @include make-col-ready();
@@ -20,21 +21,31 @@ $timeline-padding: 3em;
   // before presudo element to used as "timeline point"
   &:before {
     content: '\25CF';
-    color: $firm-yellow;
+    color: $timeline-color;
     position: absolute;
     font-size: $timeline-point-size;
     top: $timeline-point-offset-top; // offset to align point with baseline of the title's first line
-    left: $timeline-point-offset-side;
+    @include media-breakpoint-up(xs) {
+      left: 0;
+    }
+    @include media-breakpoint-up(sm) {
+      left: $timeline-point-offset-side;
+    }
   }
   // after pseudo element to be used as "part of timeline"
   &:after {
     content: '';
     position: absolute;
     width: $timeline-line-width;
-    height: 100%;
-    left: $timeline-center-offset;
-    top: 0;
-    background-color: $firm-yellow;
+    top: 14px;
+    bottom: -7px;
+    @include media-breakpoint-up(xs) {
+      left: 10px;
+    }
+    @include media-breakpoint-up(sm) {
+      left: $timeline-center-offset;
+    }
+    background-color: $timeline-color;
   }
   // puts timline to the right but only for screens greater than small
   &.inverse {

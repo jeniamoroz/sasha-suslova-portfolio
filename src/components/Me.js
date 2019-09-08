@@ -1,22 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * Me block.
  */
-const Me = () => (
+const Me = ({ pictureUrl, pictureTitle, description }) => (
   <div className="row">
     <div className="me-col-wrapper">
       <div className="me-picture-wrapper">
-        <img className="me-picture" src="/static/me.jpg" alt="Me, Sasha Suslova" />
+        <img className="me-picture" src={pictureUrl} alt={pictureTitle} />
       </div>
       <div className="me-description">
-        <p>
-          Hi, <br /> I&apos;m Sasha a user experience designer. <br /> Here you will find a brief
-          summary of some of my latest projects.
-        </p>
+        <p>{description}</p>
       </div>
     </div>
   </div>
 );
+
+Me.propTypes = {
+  pictureUrl: PropTypes.string.isRequired,
+  pictureTitle: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default Me;

@@ -1,0 +1,44 @@
+{
+  "seo": {
+    "title": "Design Portfolio - Sasha Suslova",
+    "description": "Hi, I'm Sasha a user experience designer. Here you will find a brief summary of some of my latest projects.",
+    "keywords": "designer ux ui user experience design branding web oleksandra aleksandra suslova sasha"
+  },
+  "me": {
+    "pictureUrl": "/static/me.jpg",
+    "pictureTitle": "Me, Sasha Suslova",
+    "description": "Hi,\nI'm Sasha a user experience designer.\nHere you will find a brief summary of some of my latest projects."
+  },
+  "projects": [
+    {
+      "title": "Alfa-bank - App",
+      "description": "Design of user experience for 2 user jobs.",
+      "releaseDate": "Jun 2018",
+      "inverseOrder": true,
+      "pictureUrl": "/static/alfa_1.jpg",
+      "moreUrl": "#"
+    },
+    {
+      "title": "Newstime",
+      "description": "Web-site design, project management.",
+      "releaseDate": "Feb 2019",
+      "pictureUrl": "/static/newstime_1.jpg",
+      "moreUrl": "#"
+    },
+    {
+      "title": "Y-packs",
+      "description": "Promotion strategy, product design, web-site design.",
+      "releaseDate": "Apr 2019",
+      "inverseOrder": true,
+      "pictureUrl": "/static/ypack_1.jpg",
+      "moreUrl": "#"
+    },
+    {
+      "title": "Bionit",
+      "description": "Web-site design, package design.",
+      "releaseDate": "Aug 2018",
+      "pictureUrl": "/static/bionit_1.jpg",
+      "moreUrl": "#"
+    }
+  ]
+}

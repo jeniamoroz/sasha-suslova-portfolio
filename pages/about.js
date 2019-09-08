@@ -4,35 +4,39 @@ import Layout from '../src/components/Layout';
 import AboutMe from '../src/components/AboutMe';
 import Timeline from '../src/components/Timeline';
 import { createBaseUrl } from '../src/util/api';
-import { loadExperience } from '../src/api/global';
+import { loadAbout } from '../src/api/pages';
 
 /**
  * About page.
  */
-const About = ({ experience }) => (
-  <Layout
-    title="Sasha Suslova - UXI Designer"
-    description="Designer with a passion for the problem-solving approach and deep empathy for the user. I have over 3 years experience of designing IoT products, web design, analytics products and launching startups."
-    keywords="designer"
-  >
-    <AboutMe />
-    <Timeline experience={experience} />
+const About = ({ pageData, baseUrl }) => (
+  <Layout {...pageData.seo} baseUrl={baseUrl}>
+    <AboutMe {...pageData.aboutMe} />
+    <Timeline experience={pageData.experience} />
   </Layout>
 );
 
 About.propTypes = {
-  experience: PropTypes.arrayOf(PropTypes.shape({})),
+  pageData: PropTypes.shape({
+    seo: PropTypes.shape({}),
+    aboutMe: PropTypes.shape({}),
+    experience: PropTypes.arrayOf(PropTypes.shape({})),
+  }),
+  baseUrl: PropTypes.string.isRequired,
 };
 
 About.defaultProps = {
-  experience: [],
+  pageData: {
+    experience: [],
+  },
 };
 
 About.getInitialProps = async ({ req }) => {
   const baseUrl = createBaseUrl(req);
-  const experience = await loadExperience(baseUrl);
+  const pageData = await loadAbout(baseUrl);
   return {
-    experience,
+    pageData,
+    baseUrl,
   };
 };
 

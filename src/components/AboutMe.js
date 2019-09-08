@@ -1,17 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const AboutMe = () => (
+/**
+ * Component holding "about me" information
+ */
+const AboutMe = ({ title, subtitle, description }) => (
   <div className="row">
     <div className="about-me-col">
-      <h1>Sasha Suslova</h1>
-      <p>UXI Designer</p>
-      <p>
-        For the last 4 years working on desktop/mobile sites and applications design. Experienced in
-        conducting design research, prototyping, usability testing and designing visually appealing,
-        pixel perfect and user-friendly interfaces.
-      </p>
+      <h1>{title}</h1>
+      <p>{subtitle}</p>
+      <p>{description}</p>
     </div>
   </div>
 );
+
+AboutMe.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default AboutMe;

@@ -1,5 +1,10 @@
 .timeline-title {
   margin-top: 2em;
   margin-bottom: 1em;
-  text-align: center;
+  @include media-breakpoint-up(xs) {
+    text-align: left;
+  }
+  @include media-breakpoint-up(sm) {
+    text-align: center;
+  }
 }
