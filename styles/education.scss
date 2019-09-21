@@ -1,0 +1,15 @@
+.education-list {
+  list-style-type: none;
+  .education-step-count {
+    color: #f0f3f5;
+    margin-right: 0.25em;
+    font-weight: 700;
+    font-size: 2em;
+  }
+  .education-step-description {
+    vertical-align: top;
+    .education-step-title {
+      font-weight: 700;
+    }
+  }
+}

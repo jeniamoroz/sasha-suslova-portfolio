@@ -4,7 +4,7 @@ $timeline-point-size: 40px;
 $timeline-point-offset-top: -$timeline-point-size / 2;
 $timeline-point-offset-side: -12px;
 $timeline-padding: 3em;
-$timeline-color: $firm-black;
+$timeline-color: $firm-yellow;
 
 .timeline-moment {
   @include make-col-ready();
