@@ -18,6 +18,10 @@
     }
     .nav-link {
       font-size: $lead-font-size;
+      color: $firm-black;
+      &:hover {
+        color: $firm-black;
+      }
       padding: 0;
     }
     .nav-item {
