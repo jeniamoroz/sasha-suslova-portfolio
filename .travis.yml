@@ -31,4 +31,4 @@ script:
   ## now run cypress headlessly
   ## and record all of the tests.
   - npm run cypress:run
-  - ./node_modules/.bin/lighthouse http://localhost:3000/
+  - npm run lighthouse-ci -- http://localhost:3000/

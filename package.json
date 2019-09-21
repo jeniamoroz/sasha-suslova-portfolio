@@ -6,6 +6,7 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
+    "lighthouse-ci": "lighthouse-ci",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -34,7 +35,7 @@
     "eslint-plugin-react-hooks": "1.7.0",
     "prettier": "1.18.2",
     "prettier-stylelint": "0.4.2",
-    "lighthouse": "5.4.0",
+    "lighthouse-ci": "1.10.0",
     "stylelint": "^10.1.0"
   }
 }
