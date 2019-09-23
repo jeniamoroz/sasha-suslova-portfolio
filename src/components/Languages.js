@@ -19,8 +19,12 @@ const Languages = ({ languages }) => (
           </ol>
         </div>
         <div className="languages-picture-col">
-          <img className="languages-picture-background" src="/static/language.svg" />
-          <img className="languages-picture-hero" src="/static/hero_1.svg" />
+          <img
+            className="languages-picture-background"
+            src="/static/language.svg"
+            alt="Globe and Symbols"
+          />
+          <img className="languages-picture-hero" src="/static/hero_1.svg" alt="Hero" />
         </div>
       </div>
     </div>

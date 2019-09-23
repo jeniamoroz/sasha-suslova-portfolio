@@ -19,8 +19,8 @@ const Library = ({ library }) => (
           </ol>
         </div>
         <div className="library-picture-col order-md-first">
-          <img className="library-picture-background" src="/static/library.svg" />
-          <img className="library-picture-hero" src="/static/hero_2.svg" />
+          <img className="library-picture-background" src="/static/library.svg" alt="Knowledge" />
+          <img className="library-picture-hero" src="/static/hero_2.svg" alt="Hero with a book" />
         </div>
       </div>
     </div>
