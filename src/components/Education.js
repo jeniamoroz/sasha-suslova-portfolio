@@ -1,29 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import EducationColumn from './EducationColumn';
 
 /**
  * Component holding "education" information
  */
-const Education = ({ education }) => (
-  <div className="row justify-content-md-center">
-    <div className="col-md-auto">
-      <h1>Education</h1>
-      <ol className="education-list">
-        {education.map((step, i) => (
-          <li key={step.time} className="education-step-row">
-            <span className="education-step-count">{'0' + (education.length - i)}</span>
-            <span className="education-step-description">
-              <span className="education-step-title">
-                {step.title} - {step.institution}
-              </span>
-              <span className="education-step-time">{step.time}</span>
-            </span>
-          </li>
-        ))}
-      </ol>
+const Education = ({ education }) => {
+  const educationWithCount = education.map((step, i) => ({
+    ...step,
+    count: education.length - i,
+  }));
+  const biggerHalf = Math.ceil(education.length / 2);
+  const firstColumn = educationWithCount.slice(0, biggerHalf);
+  const secondColumn = educationWithCount.slice(biggerHalf, education.length);
+  return (
+    <div className="row">
+      <div className="col-12">
+        <h1 className="education-title">Education</h1>
+        <div className="row justify-content-md-center">
+          <div className="col-md-auto col-lg-12">
+            <div className="row">
+              <EducationColumn education={firstColumn} />
+              <EducationColumn education={secondColumn} />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 Education.propTypes = {
   education: PropTypes.arrayOf(

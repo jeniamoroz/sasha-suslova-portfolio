@@ -67,29 +67,29 @@
       "time": "Mar 2019 - Apr 2019"
     },
     {
-      "title": "",
-      "institution": "",
-      "time": ""
+      "title": " Interaction Design for Usability",
+      "institution": "IDF",
+      "time": "May 2018 - Apr 2019"
     },
     {
-      "title": "",
-      "institution": "",
-      "time": ""
+      "title": "UX from scratch",
+      "institution": "IDF",
+      "time": " May 2018 - Jun 2018"
     },
     {
-      "title": "",
-      "institution": "",
-      "time": ""
+      "title": "Web design",
+      "institution": "KAMA",
+      "time": "Mar 2017 - Aug 2017"
     },
     {
-      "title": "",
-      "institution": "",
-      "time": ""
+      "title": "Masters of finance",
+      "institution": "NULES of Ukraine",
+      "time": "Sep 2014 - Dec 2015"
     },
     {
-      "title": "",
-      "institution": "",
-      "time": ""
+      "title": "Bachelor of finance",
+      "institution": "NULES of Ukraine",
+      "time": "Sep 2010 - Jun 2014"
     }
   ],
   "library": [
@@ -104,6 +104,40 @@
     {
       "title": "About face",
       "authors": "Alan Cooper, Robert Reimann, David Cronin"
+    }
+  ],
+  "tools": [
+    {
+      "title": "Google Sheets",
+      "imgUrl": "/static/google_sheets_1.png"
+    },
+    {
+      "title": "Google Slides",
+      "imgUrl": "/static/google_slides_1.png"
+    },
+    {
+      "title": "Sketch",
+      "imgUrl": "/static/sketch_1.png"
+    },
+    {
+      "title": "Figma",
+      "imgUrl": "/static/figma_1.png"
+    },
+    {
+      "title": "Invision",
+      "imgUrl": "/static/invision_1.png"
+    },
+    {
+      "title": "Zeplin",
+      "imgUrl": "/static/zeplin_1.png"
+    },
+    {
+      "title": "Adobe Illustrator",
+      "imgUrl": "/static/adobe_illustrator.png"
+    },
+    {
+      "title": "Adobe Photoshop",
+      "imgUrl": "/static/adobe_photoshop.png"
     }
   ]
 }

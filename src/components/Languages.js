@@ -5,20 +5,24 @@ import PropTypes from 'prop-types';
  * Component holding "languages" information
  */
 const Languages = ({ languages }) => (
-  <div className="row">
-    <div className="languages-list-col">
-      <h1>Languages</h1>
-      <ol className="languages-list">
-        {languages.map(language => (
-          <li key={language.title} className="language-row">
-            {language.title} - {language.level}
-          </li>
-        ))}
-      </ol>
-    </div>
-    <div className="languages-picture-col">
-      <img className="languages-picture-background" src="/static/language.svg" />
-      <img className="languages-picture-hero" src="/static/hero_1.svg" />
+  <div className="row no-gutters">
+    <div className="col">
+      <h1 className="languages-title">Languages</h1>
+      <div className="row">
+        <div className="languages-list-col">
+          <ol className="languages-list">
+            {languages.map(language => (
+              <li key={language.title} className="language-row">
+                {language.title} - {language.level}
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div className="languages-picture-col">
+          <img className="languages-picture-background" src="/static/language.svg" />
+          <img className="languages-picture-hero" src="/static/hero_1.svg" />
+        </div>
+      </div>
     </div>
   </div>
 );

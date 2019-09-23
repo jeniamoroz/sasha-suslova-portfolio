@@ -8,6 +8,7 @@ import { loadAbout } from '../src/api/pages';
 import Languages from '../src/components/Languages';
 import Library from '../src/components/Library';
 import Education from '../src/components/Education';
+import Tools from '../src/components/Tools';
 
 /**
  * About page.
@@ -19,6 +20,7 @@ const About = ({ pageData, baseUrl }) => (
     <Languages languages={pageData.languages} />
     <Education education={pageData.education} />
     <Library library={pageData.library} />
+    <Tools tools={pageData.tools} />
   </Layout>
 );
 
@@ -30,6 +32,7 @@ About.propTypes = {
     languages: PropTypes.arrayOf(),
     education: PropTypes.arrayOf(),
     library: PropTypes.arrayOf(),
+    tools: PropTypes.arrayOf(),
   }),
   baseUrl: PropTypes.string.isRequired,
 };
@@ -40,6 +43,7 @@ About.defaultProps = {
     languages: [],
     education: [],
     library: [],
+    tools: [],
   },
 };
 
